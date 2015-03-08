@@ -86,9 +86,9 @@ $app->router->add('comment', function() use ($app) {
     ]);
 });
 ```
-Now the CommentControllers xml file would have been reloaded and will not load again once called inside the Controller as it's already been pre-loaded. 
+Now the CommentControllers xml file would have been reloaded and will not load a duplicate once called inside the Controller as it's already been pre-loaded. 
 
-This can be useful for other things than pre-loading, we can for example create a dynamic navbar
+This can be useful for other things than only pre-loading, we can for example create a dynamic navbar
 ```php
 'home'  => [
     'text'  => $this->di->language->words('navbar_home', ['module' => 'navbar']),
