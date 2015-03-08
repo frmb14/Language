@@ -47,7 +47,7 @@ class Language implements \Anax\DI\IInjectionAware
      */
 	public function words($input=null, $options=[]){
 		
-		if(isset($_GET['verbose'])) $this->verbose = !$this->verbose;
+		if(isset($_GET['verbose'])) $this->verbose = true;
 		
 		// Using the Get variable 'L' in the browser will force all languages to set language if it's in the AcceptedLangs variable
 		if($this->request->getGet('l') && in_array($setLang = strtolower($this->request->getGet('l')), $this->acceptedLangs)){
