@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languagegroup>
+	<lang>
+		<word_app>board</word_app>
+		<word_key>welcome_message</word_key>
+		<word_default>Välkommen till min modul! :)
+		Den automatiska lösningen för en flerspråkig tillgänglighet för din webbplats!</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>created_by</word_key>
+		<word_default>Skapad av Fredrik Mattiasson</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>byline</word_key>
+		<word_default>Driven av Language modulen</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>title</word_key>
+		<word_default>Testa Language modulen</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>select_language</word_key>
+		<word_default>Välj språk nedan</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>swedish</word_key>
+		<word_default>Svenska</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>english</word_key>
+		<word_default>Engelska</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>check_github</word_key>
+		<word_default>Vänligen besök min GitHub repo för mer information!</word_default>
+	</lang>
+</languagegroup>

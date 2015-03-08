@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languagegroup>
+	<lang>
+		<word_app>board</word_app>
+		<word_key>welcome_message</word_key>
+		<word_default>Welcome to my module! :)
+		The automatic solution for a multi-language availability for your website!</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>byline</word_key>
+		<word_default>Powered by Language module</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>created_by</word_key>
+		<word_default>Created by Fredrik Mattiasson</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>title</word_key>
+		<word_default>Testing Language Module</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>select_language</word_key>
+		<word_default>Select the language below</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>swedish</word_key>
+		<word_default>Swedish</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>english</word_key>
+		<word_default>English</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>board</word_app>
+		<word_key>check_github</word_key>
+		<word_default>Please visit my GitHub repo for more information!</word_default>
+	</lang>
+</languagegroup>
