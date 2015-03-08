@@ -74,7 +74,7 @@ That should cover the most basic usage, more in Advanced usage!
 
 ### Advanced Usage
 
-Lets continue on handling external Controllers like the example CommentController which I mentionened above. Sometimes you do not call a Controller or Module directly inside the Front Controller but still want to use the words for a Controller like our CommentController for writing out a title or a little sentence before it's been called: Now we can pre-load the controller file by passing parameter inside the words function:
+Lets continue on handling external Controllers like the example CommentController which I mentionened above. Sometimes you do not call a Controller or Module directly inside the Front Controller but still want to use the words for a Controller like our CommentController for writing out a title or a sentence before it's been called: Now we can pre-load the controller file by passing the parameter "module" inside the words function:
 
 ```php
 $app->router->add('comment', function() use ($app) {
