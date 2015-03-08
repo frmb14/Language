@@ -94,7 +94,7 @@ $app->router->add('comment', function() use ($app) {
 ```
 Now the CommentControllers xml file would have been loaded and is available for usage.
 
-This can be useful for other things than only pre-loading, we can for example create a dynamic navbar
+This can be useful for other things than only pre-loading controllers, we can for example create a dynamic navbar
 ```php
 'home'  => [
     'text'  => $this->di->language->words('navbar_home', ['module' => 'navbar']),
