@@ -25,7 +25,7 @@ $di->setShared('language', function() use ($di){
     return $language;
 });
 ```
-Then you're ready to being.
+Then you're ready to begin.
 
 #### Basics
 ##### Configuration
