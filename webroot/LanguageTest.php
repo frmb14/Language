@@ -14,7 +14,7 @@ $di->setShared('language', function() use ($di){
 });
 
 $app->router->add('', function() use ($app){
-	$app->theme->setTitle("Test Language");
+	$app->theme->setTitle($app->language->words('title'));
 	
     $app->views->add('default/page', [
 	
