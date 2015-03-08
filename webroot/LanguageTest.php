@@ -7,12 +7,6 @@ require __DIR__.'/config.php';
 $di  = new \Anax\DI\CDIFactoryDefault();
 $app = new \Anax\Kernel\CAnax($di);
 
-$di->set('CommentController', function() use ($di) {
-    $controller = new Phpmvc\Comment\CommentController();
-    $controller->setDI($di);
-    return $controller;
-});
-
 $di->setShared('language', function() use ($di){
     $language = new \Anax\Language\Language();
 	$language->setDI($di);
