@@ -79,7 +79,8 @@ That should cover the most basic usage, more in Advanced usage!
 
 ### Advanced Usage
 
-Lets continue on handling external Controllers like the example CommentController which I mentionened above. Sometimes you do not call a Controller or Module directly inside the Front Controller but still want to use the words for a Controller like our CommentController for writing out a title or a sentence before it's been called: Now we can pre-load the controller file by passing the parameter "module" inside the words function:
+Lets continue on handling external Controllers like the example CommentController which I mentionened above. Sometimes you do not call a Controller or Module directly inside the Front Controller but still want to use the words for a Controller like our CommentController to write out a title or a sentence before it's been called.  
+You can pre-load the controller file by passing the parameter "module" inside the `Words` function:
 
 ```php
 $app->router->add('comment', function() use ($app) {
@@ -91,7 +92,7 @@ $app->router->add('comment', function() use ($app) {
     ]);
 });
 ```
-Now the CommentControllers xml file would have been reloaded and will not load a duplicate once called inside the Controller as it's already been pre-loaded. 
+Now the CommentControllers xml file would have been loaded and is available for usage.
 
 This can be useful for other things than only pre-loading, we can for example create a dynamic navbar
 ```php
