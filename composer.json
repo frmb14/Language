@@ -1,0 +1,20 @@
+{
+	"name": "frmb/language",
+	"type": "library",
+	"description": "A PHP-class to render a specific language on the website depending on clients browser language for a multi-language website",
+	"keywords": ["text", "multi", "language", "automatic", "education"],
+	"license": "MIT",
+	"authors": [
+	{
+		"name": "Fredrik Mattiasson",
+		"email": "frmb14@student.bth.se",
+		"role": "Developer"
+	}
+	],
+		"require": {
+		"php": ">=5.4"
+	},
+		"autoload": {
+		"psr-4": { "anax\\": "src/" }
+	}
+}
