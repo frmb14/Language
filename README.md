@@ -49,7 +49,7 @@ To create new Language files use this template and call it **prefix_board.xml** 
 ```
 ##### General
 
-The default file loaded when inside the Front Controller is the **prefix_board.xml** file where **prefix** is the selected language by the browser (or manually by entering `?l=SHORT_LANGUAGE`), this is where all global words and sentences should be saved, such as credits, welcome message, footer messages and so on.
+The default file that's loaded when inside a Front Controller is the **prefix_board.xml** file where **prefix** is the selected language by the browser and automatically deteced by Language (or manually by entering `?l=SHORT_LANGUAGE`), this is where all global words and sentences should be saved, such as credits, welcome message, footer messages and so on.
 
 The class can accessed inside your Front Controller by typing
 ```php
@@ -57,7 +57,7 @@ $app->language->words('welcome_message');
 ```
 This will generate the text from **prefix_board.xml** which is "Welcome to my module!" or any other language that you have set and translated.
 
-To use the it inside a Controller or a Module class you simply will only call the words function by using $this instead of $app for example:
+To use the it inside a Controller or a Module class you will simply call the Words function by using $this instead of $app for example:
 ```php
 class CommentController
 {
