@@ -111,3 +111,6 @@ $app->views->add('me/hem', [
 	'byline' => $byline . $app->language->words('byline'),
 ]);
 ```
+
+## Changelog
+**2015-03-08** 1.0 - Initial release
