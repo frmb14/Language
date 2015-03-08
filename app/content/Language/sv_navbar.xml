@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languagegroup>
+	<lang>
+		<word_app>navbar</word_app>
+		<word_key>nav_home</word_key>
+		<word_default>Hem</word_default>
+	</lang>
+	
+	<lang>
+		<word_app>navbar</word_app>
+		<word_key>nav_comments</word_key>
+		<word_default>Kommentarer</word_default>
+	</lang>
+	
+</languagegroup>
