@@ -29,7 +29,7 @@ Then you're ready to being.
 
 #### Basics
 ##### Configuration
-Open up tile class file **Language.php** inside the installation directory (default *vendor/frmb/language/src/Language/*), inside the __construct function there's block of configuration. There you will set what languages that the site will support, en (English) should always be included as it's default for unsupported languages. Then what ever language you insert is up to you for example: **sv** (Swedish), **dk** (Denmark) and **no** (Norwegian), do remember that if you enter a language in the configuration, you MUST create a file matching the language.
+Open up tile class file **Language.php** inside the installation directory (default *vendor/frmb/language/src/Language/*), inside the __construct function there's block of configuration. There you will set what languages that the site will support, en (English) should always be included as it's default for unsupported languages. Then whatever language you insert is up to you for example: **sv** (Swedish), **dk** (Denmark) and **no** (Norwegian), do remember that if you enter a language in the configuration, you MUST create a file matching the language.
 
 Verbose is a developer option and should always be set to FALSE on a live page, it will display debug information regarding what language files are being loaded. This can be toggled on the website by inserting `?verbose` (or if you already have a $_GET variable, `&verbose`, you know the drill).
 
@@ -65,11 +65,14 @@ To use the it inside a Controller or a Module class you simply will only call th
 class CommentController
 {
 	public function viewAction(){
-		return $this->language->words('commentcontroller_hello'); 
+		echo $this->language->words('commentcontroller_hello'); 
 	}
 }
 ```
-But if we call the language class inside a Controller or module then we're no longer inside the "board", right? Then we're inside the Controller or Module. Therefore we need a new XML document to cover its words. 
-As default you need to create a new file in your Language folder called **prefix_CLASSNAME.xml**, as in the example above the result would be **en_commentcontroller.xml**. You can simply paste the xml code that's in the Configuration a little bit up, but if you watch closely there's a xml object called "word_app" where it says "board", yet again, we're not in the board but in a Controller or a Module, so change it to our CLASSNAME, CommentController as in the exampel.
+But if we call the Language class inside a Controller or Module then we're no longer inside the "board", right? 
+We're inside the Controller or Module and therefore we need a new XML document to cover its words!
+As default you need to create a new file in your Language folder called **prefix_classname.xml**, in the example above the result would be **en_commentcontroller.xml**. You can simply paste the xml code that's in the Configuration a little bit up, but if you watch closely there's a xml object called "word_app" where it says "board", yet again, we're not in the board but in a Controller or a Module now, so change it to our class name, CommentController as in the exampel.
+
+That should cover the most basic usage, more in Advanced usage!
 
 ### Advanced Usage
