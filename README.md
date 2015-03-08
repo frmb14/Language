@@ -25,6 +25,7 @@ $di->setShared('language', function() use ($di){
     return $language;
 });
 ```
+
 Then you're ready to begin.
 
 #### Basics
@@ -47,6 +48,9 @@ To create new Language files use this template and call it **prefix_board.xml** 
 	</lang>
 </languagegroup>
 ```
+
+Having the Verbose option set to true is highly recommended during the development and testing period as you'll be able to see what files are being loaded and not. Verbose can also be toggled by writing `?verbose` in the browser.
+
 ##### General
 
 The default file that's loaded when inside a Front Controller is the **prefix_board.xml** file where **prefix** is the selected language by the browser and automatically detected by Language (or manually by entering `?l=SHORT_LANGUAGE` in the browser), this is where all global words and sentences should be saved, such as credits, welcome message, footer messages and so on.
