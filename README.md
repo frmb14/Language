@@ -31,8 +31,6 @@ Then you're ready to being.
 ##### Configuration
 Open up tile class file **Language.php** inside the installation directory (default *vendor/frmb/language/src/Language/*), inside the __construct function there's block of configuration. There you will set what languages that the site will support, en (English) should always be included as it's default for unsupported languages. Then whatever language you insert is up to you for example: **sv** (Swedish), **dk** (Denmark) and **no** (Norwegian), do remember that if you enter a language in the configuration, you MUST create a file matching the language.
 
-Verbose is a developer option and should always be set to FALSE on a live page, it will display debug information regarding what language files are being loaded. This can be toggled on the website by inserting `?verbose` (or if you already have a $_GET variable, `&verbose`, you know the drill).
-
 To create new Language files use this template and call it **prefix_board.xml** where **prefix** is the language, for example, **en** or **sv** inside the *content/Language* folder and paste this XML
 
 ```xml
@@ -76,3 +74,41 @@ As default you need to create a new file in your Language folder called **prefix
 That should cover the most basic usage, more in Advanced usage!
 
 ### Advanced Usage
+
+Lets continue on handling external Controllers like the example CommentController which I mentionened above. Sometimes you do not call a Controller or Module directly inside the Front Controller but still want to use the words for a Controller like our CommentController for writing out a title or a little sentence before it's been called: Now we can pre-load the controller file by passing parameter inside the words function:
+
+```php
+$app->router->add('comment', function() use ($app) {
+	$app->theme->setTitle($app->language->words( 'commentcontroller_hello', ['module' => 'CommentController']) );
+	
+	$app->views->add('comment/form', [
+        'title' => , $app->language->words('commentcontroller_title'),
+        'information' => $app->language->words('commentcontroller_information'),
+    ]);
+});
+```
+Now the CommentControllers xml file would have been reloaded and will not load again once called inside the Controller as it's already been pre-loaded. 
+
+This can be useful for other things than pre-loading, we can for example create a dynamic navbar
+```php
+'home'  => [
+    'text'  => $this->di->language->words('navbar_home', ['module' => 'navbar']),
+    'url'   => $this->di->get('url')->create(''),
+    'title' => 'Home route of current frontcontroller'
+],
+'comments'  => [
+    'text'  => $this->di->language->words('navbar_comments),
+    'url'   => $this->di->get('url')->create('comments'),
+    'title' => 'Route to our Comment Controllers'
+],
+```
+Using the example above would require a new file called **prefix_navbar.xml** with the word_app set to navbar.
+
+Forcing a language to be used is also possible, we can for example always make one set as English by using the parameter *lang*.
+
+```php
+$app->views->add('me/hem', [
+	'content' => $content . $app->language->words('welcome_message') . '<br/>' . $app->language->words('welcome_message', ['lang' => 'en']),
+	'byline' => $byline . $app->language->words('byline'),
+]);
+```
