@@ -49,7 +49,7 @@ To create new Language files use this template and call it **prefix_board.xml** 
 ```
 ##### General
 
-The default file that's loaded when inside a Front Controller is the **prefix_board.xml** file where **prefix** is the selected language by the browser and automatically deteced by Language (or manually by entering `?l=SHORT_LANGUAGE`), this is where all global words and sentences should be saved, such as credits, welcome message, footer messages and so on.
+The default file that's loaded when inside a Front Controller is the **prefix_board.xml** file where **prefix** is the selected language by the browser and automatically detected by Language (or manually by entering `?l=SHORT_LANGUAGE` in the browser), this is where all global words and sentences should be saved, such as credits, welcome message, footer messages and so on.
 
 The class can accessed inside your Front Controller by typing
 ```php
