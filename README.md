@@ -31,8 +31,7 @@ Then you're ready to being.
 ##### Configuration
 Open up tile class file **Language.php** inside the installation directory (default *vendor/frmb/language/src/Language/*), inside the __construct function there's block of configuration. There you will set what languages that the site will support, en (English) should always be included as it's default for unsupported languages. Then whatever language you insert is up to you for example: **sv** (Swedish), **dk** (Denmark) and **no** (Norwegian), do remember that if you enter a language in the configuration, you MUST create a file matching the language.
 
-To create new Language files use this template and call it **prefix_board.xml** where **prefix** is the language, for example, **en** or **sv** inside the *content/Language* folder and paste this XML
-
+To create new Language files use this template and call it **prefix_board.xml** where **prefix** is the language, for example **en** or **sv** inside the *content/Language* folder and paste this XML
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <languagegroup>
