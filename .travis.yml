@@ -12,6 +12,7 @@ script:
     - composer update --no-dev
     - cp -r app/content/Language/. vendor/anax/mvc/app/content/Language/
     - phpunit --bootstrap test/config.php --coverage-clover coverage.clover test
+
  
 after_script:
     - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
