@@ -48,6 +48,9 @@ class Language implements \Anax\DI\IInjectionAware
 		
 		if(isset($_GET['verbose'])) $this->verbose = true;
 		
+		/**
+		  * @property string $this->request->getGet fetches the GET variable in AnaxMVC
+		  */
 		// Using the Get variable 'L' in the browser will force all languages to set language if it's in the AcceptedLangs variable
 		if($this->request->getGet('l') && in_array($setLang = strtolower($this->request->getGet('l')), $this->acceptedLangs)){
 			$this->lang = $setLang;
@@ -144,10 +147,10 @@ class Language implements \Anax\DI\IInjectionAware
 	private function prefered_language(array $available_languages, $http_accept_language){
 		
 		$available_languages = array_flip($available_languages);
-		$langs;
+		$langs = array();
 		preg_match_all('~([\w-]+)(?:[^,\d]+([\d.]+))?~', strtolower($http_accept_language), $matches, PREG_SET_ORDER);
 		foreach($matches as $match){
-			list($a, $b) = explode('-', $match[1]) + array('', '');
+			list($a, ) = explode('-', $match[1]) + array('', '');
 			$value = isset($match[2]) ? (float) $match[2] : 1.0;
 
 			if(isset($available_languages[$match[1]])) {
