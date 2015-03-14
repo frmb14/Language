@@ -5,5 +5,8 @@ php:
     - hhvm
 
 script: 
-    - composer update --no-dev
+    - git clone --depth=50 --branch=master git://github.com/mosbth/Anax-MVC.git frmb14/
     - phpunit --bootstrap test/config.php test
+
+notifications:
+  email: false
