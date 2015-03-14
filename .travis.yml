@@ -5,4 +5,5 @@ php:
     - hhvm
 
 script: 
+    - composer update --no-dev
     - phpunit --bootstrap test/config.php test
