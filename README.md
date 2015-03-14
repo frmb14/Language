@@ -1,4 +1,7 @@
 # Language
+
+[![Build Status](https://travis-ci.org/frmb14/Language.svg?branch=master)](https://travis-ci.org/frmb14/Language)
+
 A PHP-class to render a specific language on the website depending on clients browser language for a multi-language website in Anax-MVC Framework: http://github.com/mosbth/Anax-MVC/
 
 ## How to use
