@@ -1,6 +1,8 @@
 # Language
 
 [![Build Status](https://travis-ci.org/frmb14/Language.svg?branch=master)](https://travis-ci.org/frmb14/Language)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/frmb14/Language/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/frmb14/Language/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/frmb14/Language/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/frmb14/Language/?branch=master)
 
 A PHP-class to render a specific language on the website depending on clients browser language for a multi-language website in Anax-MVC Framework: http://github.com/mosbth/Anax-MVC/
 
