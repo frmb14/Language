@@ -6,6 +6,7 @@ php:
 
 script: 
     - composer update --no-dev
+    - cp -r app/content/Language/. vendor/anax/mvc/app/content/Language/
     - phpunit --bootstrap test/config.php test
 
 notifications:
