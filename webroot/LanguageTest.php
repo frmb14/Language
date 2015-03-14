@@ -37,7 +37,6 @@ $app->router->add('', function() use ($app){
 	
 });
 
-
 $app->router->add('source', function() use ($app){
 	$app->theme->addStylesheet('css/source.css');
     $app->theme->setTitle("Källkod");
