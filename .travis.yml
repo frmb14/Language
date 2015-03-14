@@ -14,7 +14,7 @@ script:
     - phpunit --bootstrap test/config.php --coverage-clover coverage.clover test
 
 after_script:
-    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+    - php ocular.phar code-coverage:upload --access-token="a890f9580001df9611ed6bd8ee2776dcc0b634b62c9d40b22c73df8f8c4d7fde" --format=php-clover coverage.clover
 
 notifications:
   email: false
