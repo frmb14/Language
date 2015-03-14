@@ -48,9 +48,6 @@ class Language implements \Anax\DI\IInjectionAware
 		
 		if(isset($_GET['verbose'])) $this->verbose = true;
 		
-		/**
-		  * @property string $this->request->getGet fetches the GET variable in AnaxMVC
-		  */
 		// Using the Get variable 'L' in the browser will force all languages to set language if it's in the AcceptedLangs variable
 		if($this->request->getGet('l') && in_array($setLang = strtolower($this->request->getGet('l')), $this->acceptedLangs)){
 			$this->lang = $setLang;
