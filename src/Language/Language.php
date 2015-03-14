@@ -18,7 +18,6 @@ class Language implements \Anax\DI\IInjectionAware
     /**
      * Constructor, setting variables and configuration
      * 
-     * @return void
      */
 	public function __construct(){
 		
@@ -40,8 +39,8 @@ class Language implements \Anax\DI\IInjectionAware
     /**
      * The main function that grabs the sentence from the correct XML document depending on the browser language and / or set language.
      * 
-     * @param int $input, key identifier for the XML document
-     * @param array $options, user options of various kind, 'lang' => 'en' for manual English language and 'module' => 'XController' for custom module loading in the VIEWS (this is not needed when called from the actual module)
+     * @param int $input key identifier for the XML document
+     * @param array $options user options of various kind, 'lang' => 'en' for manual English language and 'module' => 'XController' for custom module loading in the VIEWS (this is not needed when called from the actual module)
      * 
      * @return string $word, the full sentence / word from said key
      */
