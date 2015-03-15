@@ -55,12 +55,38 @@ class LanguageTest extends \PHPUnit_Framework_TestCase
 		$res = $this->language->words('byline', ['lang' => 'sv', 'module' => 'board']);
 		$exp = 'Driven av Language modulen';
 		$this->assertEquals($res, $exp, "Created element text missmatch.");
+		
+		/*
+		 * Make sure that using a non-existing word returns null
+ 		 */
+		$res = $this->language->words('non-existing-word', ['lang' => 'sv', 'module' => 'board']);
+		$this->assertNull($res, "Expected to return null");
+		
+		/*
+		 * See if we're inside the class 'board'
+ 		 */
+		$property = $this->reflectionClass->getProperty('class');
+		$property->setAccessible(true);
+		
+		$this->assertContains( "board" , $property->getValue($this->language), "Class missmatched.");
+		
+		/*
+		 * Load another module
+ 		 */
+		$res = $this->language->words('nav_home', ['lang' => 'en', 'module' => 'navbar']);
+		$exp = 'Home';
+		$this->assertEquals($res, $exp, "Created element text missmatch.");
+		
+		/*
+		 * We've now loaded 3 modules, they should be listed in the variable $loaded
+ 		 */
+		$property = $this->reflectionClass->getProperty('loaded');
+		$property->setAccessible(true);
+
+		$this->assertEquals( array('en_board', 'sv_board', 'en_navbar') , $property->getValue($this->language), "3 Modules should be loaded");
 	}
 	
 	public function testGetCallingFunction(){
-		
-		//$this->invokeMethod($user, 'cryptPassword', array('passwordToCrypt'));
-		//$user->cryptPassword('passwordToCrypt');
 		
 		$res = $this->invokeMethod($this->language, 'get_calling_function');
 		$exp = 'Anax\Language\LanguageTest';
