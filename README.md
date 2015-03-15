@@ -124,4 +124,6 @@ $app->views->add('me/hem', [
 ```
 
 ## Changelog
+**2015-03-14** 1.2 - Added Travis CI and Scrutinizer. Optimized code and added 4 more test cases for PHPUnit.
+**2015-03-14** 1.1 - Many updates
 **2015-03-08** 1.0 - Initial release
